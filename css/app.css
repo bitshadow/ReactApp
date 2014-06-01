@@ -1,0 +1,91 @@
+body {
+	margin: 0 auto;
+	vertical-align: middle;
+  width: 100%;
+  background-color: #eee;
+}
+
+.add-user, .edit-user {
+	margin: 100px auto;
+  width: 500px
+}
+
+td {
+  border-top:none !important;
+  border-bottom: 1px solid #ddd;
+}
+
+.button-add {
+  text-align: center;
+  padding: 100px;
+  background-color: #2C3E50;
+}
+
+.cards {
+  margin: 10px 40px;
+}
+
+.card {
+  min-width: 400px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  float: left;
+  padding: 10px;
+  word-wrap break-word;
+  background-color: #fff;
+}
+
+.thumb, .profile-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.profile-image {
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #1ABC9C;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #26EEC6;
+}
+
+h1 {
+  vertical-align: center;
+}
+
+/*
+.view {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}*/
+
+/*.animate-enter {
+  opacity    : 0.01;
+  transition : opacity .5s ease-in;
+}
+
+.animate-enter.animate-enter-active {
+  opacity : 1;
+}
+
+.animate-leave {
+  opacity    : 1;
+  transition : opacity .5s ease-in;
+}
+
+.animate-leave.animate-leave-active {
+  opacity : 0.01;
+}
+
+a {
+  cursor : pointer;
+  color  : blue;
+}*/
