@@ -23,9 +23,9 @@ var app = app || {};
     componentDidMount: function() {
       var self = this;
 
+      console.log('location: ', window.location.pathname);
       // default or users route
       page('/', function (ctx) {
-        console.log('main page called', app.users);
         self.setState({
           component: React.createElement(UsersComponent, {collection: app.users})
         });
@@ -50,7 +50,6 @@ var app = app || {};
       });
 
       page('*', function (ctx) {
-        console.log('* page called', app.users);
         self.setState({ component: React.createElement(PageNotFound, null) });
       });
 

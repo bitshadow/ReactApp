@@ -23,9 +23,9 @@ var app = app || {};
     componentDidMount: function() {
       var self = this;
 
+      console.log('location: ', window.location.pathname);
       // default or users route
-      page('/ReactApp/', function (ctx) {
-        console.log('main page called', app.users);
+      page('/', function (ctx) {
         self.setState({
           component: <UsersComponent collection={app.users} />
         });
