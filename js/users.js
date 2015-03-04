@@ -8,7 +8,7 @@ var app = app || {};
 
     model: app.User,
 
-    localStorage: new Backbone.LocalStorage('sprinklr-assignment'),
+    localStorage: new Backbone.LocalStorage('react_db'),
 
     comparator: function(user) {
       return user.get('name');
