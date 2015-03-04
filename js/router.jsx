@@ -25,6 +25,7 @@ var app = app || {};
 
       // default or users route
       page('/', function (ctx) {
+        console.log('main page called', app.users);
         self.setState({
           component: <UsersComponent collection={app.users} />
         });
@@ -49,6 +50,7 @@ var app = app || {};
       });
 
       page('*', function (ctx) {
+        console.log('* page called', app.users);
         self.setState({ component: <PageNotFound /> });
       });
 
