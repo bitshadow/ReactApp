@@ -36,7 +36,7 @@ var app = app || {};
       // Create model and add to collection.
       this.props.collection.create(user);
       // navigate back to users after creating user.
-      app.navigate('/')();
+      app.navigate(app.BASE_ROUTE + '/')();
     },
 
     // HTML5 File Api for file upload.
@@ -88,7 +88,7 @@ var app = app || {};
             React.createElement("div", {className: "form-group"}, 
               React.createElement("input", {placeholder: "image", onChange: this.handleFileSelect, className: "form-control", type: "file", name: "image"})
             ), 
-            React.createElement("button", {type: "button", onClick: app.navigate('/'), className: "btn btn-default pull-left"}, "Go Back"), 
+            React.createElement("button", {type: "button", onClick: app.navigate(app.BASE_ROUTE + '/'), className: "btn btn-default pull-left"}, "Go Back"), 
             React.createElement("button", {type: "button", onClick: this.createUser, className: "btn btn-default pull-right"}, "Create User")
           )
         )

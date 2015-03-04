@@ -3,6 +3,7 @@
   */
 var app = app || {};
 app.properties = ['name', 'address', 'number', 'image'];
+app.BASE_ROUTE = '/ReactApp';
 
 (function(){
   app.navigate = function (url) {

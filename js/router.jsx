@@ -22,25 +22,25 @@ var app = app || {};
 
     componentDidMount: function() {
       var self = this;
-
-      console.log('location: ', window.location.pathname);
+      page('/', function(ctx) {
+        app.navigate(app.BASE_ROUTE + '/')();
+      });
       // default or users route
-      page('/ReactApp/', function (ctx) {
-        console.log('inside reactapp');
+      page(app.BASE_ROUTE + '/', function (ctx) {
         self.setState({
           component: <UsersComponent collection={app.users} />
         });
       });
 
       // add route
-      page('/ReactApp/add', function(ctx) {
+      page(app.BASE_ROUTE + '/add', function(ctx) {
         self.setState({
           component: <NewUserComponent collection={app.users} />
         });
       });
 
       // edit user with model id
-      page('/ReactApp/users/:id', function (ctx) {
+      page(app.BASE_ROUTE + '/users/:id', function (ctx) {
         var model = app.users.get(ctx.params.id);
         if (!model) {
           app.navigate('blahblah');

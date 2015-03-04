@@ -50,7 +50,7 @@ var app = app || {};
 
     destroy: function(e) {
       this.props.model.destroy();
-      app.navigate('/')()
+      app.navigate(app.BASE_ROUTE + '/')()
     },
 
     handleFileSelect: function(e) {
@@ -140,7 +140,7 @@ var app = app || {};
               )
             )
           ), 
-          React.createElement("button", {type: "button", onClick: app.navigate('/'), className: "btn btn-default pull-left"}, "Go Back"), 
+          React.createElement("button", {type: "button", onClick: app.navigate(app.BASE_ROUTE + '/'), className: "btn btn-default pull-left"}, "Go Back"), 
           React.createElement("button", {type: "button", onClick: this.destroy, className: "btn btn-default pull-right"}, "Delete User")
         )
       )

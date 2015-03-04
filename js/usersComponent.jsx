@@ -34,13 +34,13 @@ var app = app || {};
       return (
         <div className='header'>
           <div className='button-add'>
-            <button className='btn btn-default' onClick={app.navigate('/add')}>Add New User</button>
+            <button className='btn btn-default' onClick={app.navigate(app.BASE_ROUTE + '/add')}>Add New User</button>
           </div>
           <div className='cards'>
             {this.props.collection.map(function(model) {
               return (
                 <div className='card'>
-                  <a className='pull-right' href={'/users/' + model.id}>edit</a>
+                  <a className='pull-right' href={app.BASE_ROUTE + '/users/' + model.id}>edit</a>
                   <div className='pull-left'>
                     <img className='profile-image' src={model.get('image')} />
                   </div>

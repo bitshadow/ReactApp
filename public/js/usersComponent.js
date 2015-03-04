@@ -34,13 +34,13 @@ var app = app || {};
       return (
         React.createElement("div", {className: "header"}, 
           React.createElement("div", {className: "button-add"}, 
-            React.createElement("button", {className: "btn btn-default", onClick: app.navigate('/add')}, "Add New User")
+            React.createElement("button", {className: "btn btn-default", onClick: app.navigate(app.BASE_ROUTE + '/add')}, "Add New User")
           ), 
           React.createElement("div", {className: "cards"}, 
             this.props.collection.map(function(model) {
               return (
                 React.createElement("div", {className: "card"}, 
-                  React.createElement("a", {className: "pull-right", href: '/users/' + model.id}, "edit"), 
+                  React.createElement("a", {className: "pull-right", href: app.BASE_ROUTE + '/users/' + model.id}, "edit"), 
                   React.createElement("div", {className: "pull-left"}, 
                     React.createElement("img", {className: "profile-image", src: model.get('image')})
                   ), 
