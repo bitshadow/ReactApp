@@ -25,21 +25,22 @@ var app = app || {};
 
       console.log('location: ', window.location.pathname);
       // default or users route
-      page('/', function (ctx) {
+      page('/ReactApp/', function (ctx) {
+        console.log('inside reactapp');
         self.setState({
           component: <UsersComponent collection={app.users} />
         });
       });
 
       // add route
-      page('/add', function(ctx) {
+      page('/ReactApp/add', function(ctx) {
         self.setState({
           component: <NewUserComponent collection={app.users} />
         });
       });
 
       // edit user with model id
-      page('/users/:id', function (ctx) {
+      page('/ReactApp/users/:id', function (ctx) {
         var model = app.users.get(ctx.params.id);
         if (!model) {
           app.navigate('blahblah');
